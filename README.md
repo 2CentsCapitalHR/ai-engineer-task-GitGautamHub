@@ -1,6 +1,6 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/vgbm4cZ0)
 
-# ADGM-Compliant Corporate Agent
+# ADGM-Corporate Agent
 
 ### Project Overview
 This project is an intelligent AI-powered legal assistant designed to review and validate documents for business compliance within the **Abu Dhabi Global Market (ADGM)** jurisdiction. The agent assists users by checking uploaded `.docx` files against official ADGM regulations to detect red flags, verify document completeness, and generate a structured review report.
