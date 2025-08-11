@@ -62,8 +62,6 @@ def analyze_document(doc_content, retriever, llm):
 
     response = qa_chain({"query": prompt_template.format(doc_content=doc_content, context="")})
     
-    # The response will contain the LLM's output and source documents
-    # The LLM is instructed to return JSON, which we will parse later.
     return response['result']
 
 
@@ -75,7 +73,6 @@ def identify_legal_process(uploaded_files):
         return "Company Incorporation"
     elif any("employment" in name for name in uploaded_doc_names):
         return "Employment HR"
-    # Add more conditions for other categories as needed
     
     return "Unknown"
 
@@ -96,41 +93,8 @@ def check_missing_documents(uploaded_files):
     missing_docs = []
     
     for required_doc in required_docs_for_incorporation:
-        # A simple check based on filename, can be more sophisticated
         if not any(required_doc.lower() in name.lower() for name in uploaded_doc_names):
             missing_docs.append(required_doc)
             
     return missing_docs, len(required_docs_for_incorporation)
 
-if __name__ == "__main__":
-    
-    # 1. Load RAG System
-    retriever = load_rag_system()
-    
-    # 2. Setup LLM
-    
-    llm = ChatOpenAI(temperature=0, model_name="gpt-4o", openai_api_key=os.environ.get("OPENAI_API_KEY"))
-
-    # 3. Simulate uploaded documents (for testing)
-    # A flawed document for testing red flag detection
-    flawed_doc_content = "This agreement is governed by the laws of the UAE Federal Courts."
-    
-    # 4. Analyze the flawed document
-    analysis_result = analyze_document(flawed_doc_content, retriever, llm)
-    print("--- Document Analysis Result ---")
-    print(analysis_result)
-    
-    # 5. Check for missing documents (simulating a list of uploaded file objects)
-    # Let's say user uploaded 4 out of 5 docs
-    dummy_uploaded_files = [
-        type('obj', (object,), {'name': 'Articles of Association.docx'}),
-        type('obj', (object,), {'name': 'Memorandum of Association.docx'}),
-        type('obj', (object,), {'name': 'UBO Declaration Form.docx'}),
-        type('obj', (object,), {'name': 'Board Resolution Templates.docx'})
-    ]
-    missing_docs, total_docs = check_missing_documents(dummy_uploaded_files)
-    
-    print("\n--- Document Checklist Result ---")
-    print(f"Total documents required: {total_docs}")
-    print(f"Uploaded documents: {len(dummy_uploaded_files)}")
-    print(f"Missing documents: {', '.join(missing_docs)}")
