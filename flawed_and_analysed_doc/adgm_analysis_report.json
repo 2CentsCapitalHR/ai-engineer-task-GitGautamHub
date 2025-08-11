@@ -1,0 +1,41 @@
+{
+    "process": "Company Incorporation",
+    "documents_uploaded": 1,
+    "required_documents": 5,
+    "missing_document": "Articles of Association, Memorandum of Association, Board Resolution Templates, UBO Declaration Form, Register of Members and Directors",
+    "issues_found": [
+        {
+            "document": "Flawed_Employment_Contract.docx",
+            "issues": [
+                {
+                    "issue": "Incorrect jurisdiction specified",
+                    "section": "GOVERNING LAW",
+                    "relevant_text": "This Contract is governed by and construed in accordance with the laws, regulations and rules applicable in Dubai International Financial Centre (DIFC) and the parties hereto submit to the exclusive jurisdiction of the courts of Dubai International Financial Centre (DIFC).",
+                    "severity": "High",
+                    "suggestion": "Update jurisdiction to ADGM Courts."
+                },
+                {
+                    "issue": "Missing signatory sections",
+                    "section": "End of document",
+                    "relevant_text": "No signatory section is provided at the end of the document.",
+                    "severity": "Medium",
+                    "suggestion": "Add a section for signatures of both parties at the end of the contract."
+                },
+                {
+                    "issue": "Ambiguous or non-binding language",
+                    "section": "HOURS OF EMPLOYMENT",
+                    "relevant_text": "[Please use this clause if the Employee is not eligible for overtime payments. Further information can be found in the footnote:] [The Employee shall not be entitled to receive any additional or overtime payment for work performed outside the Employee\u2019s normal working hours.] OR [Please use this clause if the Employee is eligible for overtime payments. Further information can be found in the footnote:] [The Employee shall be entitled to overtime compensation for work performed outside the Employee\u2019s normal working hours in accordance with Company policy regarding overtime.]",
+                    "severity": "Medium",
+                    "suggestion": "Ensure the employer selects the appropriate clause and removes the instructional text and options."
+                },
+                {
+                    "issue": "Ambiguous or non-binding language",
+                    "section": "PLACE OF EMPLOYMENT",
+                    "relevant_text": "[Please use this clause if the Employee is not a remote employee:] The Employee\u2019s place of employment shall be [insert Company address] but the Employee may be required to temporarily work at such other places in the UAE or elsewhere as reasonably determined by the Company from time to time within ordinary course of business.] OR [Please use this clause if the Employee is a remote employee:] The Employee\u2019s place of employment shall be [insert Employee home address] but the Employee may be required to work temporarily at such other places in the UAE or elsewhere as reasonably determined by the Company from time to time within ordinary course of business.]",
+                    "severity": "Medium",
+                    "suggestion": "Ensure the employer selects the appropriate clause and removes the instructional text and options."
+                }
+            ]
+        }
+    ]
+}

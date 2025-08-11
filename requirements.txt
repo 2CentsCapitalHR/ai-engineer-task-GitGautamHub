@@ -1,0 +1,11 @@
+python-docx
+streamlit
+langchain
+faiss-cpu
+sentence-transformers
+pypdf2
+unstructured
+openai
+requests
+beautifulsoup4
+langchain-community
