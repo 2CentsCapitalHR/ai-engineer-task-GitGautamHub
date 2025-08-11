@@ -58,7 +58,7 @@ Follow these steps to set up and run the project locally.
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/2CentsCapitalHR/ai-engineer-task-GitGautamHub.git](https://github.com/2CentsCapitalHR/ai-engineer-task-GitGautamHub.git)
+    git clone https://github.com/2CentsCapitalHR/ai-engineer-task-GitGautamHub.git
     cd ai-engineer-task-GitGautamHub
     ```
 
